@@ -64,7 +64,11 @@
 								<div class="space"></div>
 							</div>
                             <div class="col-md-6">
+                                <div id="thank-you-message">
+                                    <p>Thanks for your reservation</p>
+                                </div>
                                 <form id="booking-form">
+<input id="foo" type="hidden" value="bar">
                                     <div class="form-group">
                                         <span id="signinButton">
                                           <span
@@ -78,18 +82,20 @@
                                         </span>
                                     </div>
                                     <div class="form-group">
-                                        <span id="name"></span>
+                                        <label for="name">Name</label>
+                                        <input id="name" name="name" type="text" class="form-control" readonly>
                                     </div>
                                     <div class="form-group">
-                                        <span id="email"></span>
+                                        <label for="email">Email</label>
+                                        <input id="email" name="email" type="email" class="form-control" readonly>
                                     </div>
                                     <div class="form-group">
-                                        <label>Check-in</label>
-                                        <input type="date" class="form-control" required>
+                                        <label for="checkin">Check-in</label>
+                                        <input id="checkin" name="checkin" type="date" class="form-control" required>
                                     </div>
                                     <div class="form-group">
-                                        <label>Check-out</label>
-                                        <input type="date" class="form-control" required>
+                                        <label for="checkout">Check-out</label>
+                                        <input id="checkout" name="checkout" type="date" class="form-control" required>
                                     </div>
                                     <div class="form-group">
                                         <input type="submit" class="btn btn-default btn-block">

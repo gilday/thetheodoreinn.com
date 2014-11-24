@@ -1,3 +1,12 @@
 #name, #email {
   font-weight: bold;
 }
+
+#thank-you-message {
+  display: none;
+}
+#thank-you-message p {
+  padding-top: 120px;
+  text-align: center;
+  font-size: 2em;
+}
