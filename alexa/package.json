@@ -1,0 +1,23 @@
+{
+  "name": "thetheodoreinn-alexa",
+  "version": "0.0.1",
+  "description": "Amazon Alexa skill for checking availability and booking The Theodore Inn",
+  "main": "index.js",
+  "repository": "github.com:gilday/thetheodoreinn.com",
+  "private": true,
+  "author": "Johnathan Gilday <me@johnathangilday.com>",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "tsc",
+    "package": "sam package --template-file ./thetheodoreinn.sam.yaml --s3-bucket thetheodoreinn --output-template-file=./thetheodoreinn-packaged.sam.yaml",
+    "deploy": "sam deploy --template-file ./thetheodoreinn-packaged.sam.yaml --stack-name thetheodoreinn --capabilities CAPABILITY_IAM"
+  },
+  "devDependencies": {
+    "aws-sam-local": "^0.1.1",
+    "typescript": "^2.4.2"
+  },
+  "dependencies": {
+    "alexa-sdk": "^1.0.12"
+  }
+}
